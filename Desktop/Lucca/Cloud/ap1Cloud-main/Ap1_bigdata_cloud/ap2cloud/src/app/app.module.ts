@@ -27,9 +27,9 @@ import { CreateLivroComponent } from './create-livro/create-livro.component';
     AppComponent,
     HomeComponent,
     DetailComponent,
-    CreateProdutosComponent,
+    CreateLivroComponent,
     AutorComponent,
-    CreateProdutosComponent
+    CreateLivroComponent
    ],
 
   imports: [
