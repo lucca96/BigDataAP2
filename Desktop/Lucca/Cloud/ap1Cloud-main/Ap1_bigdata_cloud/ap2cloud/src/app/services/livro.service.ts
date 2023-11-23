@@ -10,12 +10,12 @@ export class LivroService {
 
   constructor(private http: HttpClient) { }
 
-  public getLivro(idMarca:any) : Observable<LivroModel[]> {
+  public getLivro(idAutor:any) : Observable<LivroModel[]> {
     return this.http.get<LivroModel[]>(`https://localhost:8080//autor/${idAutor}/livro`);
   }
 
-  public createLivro(idMarca: any, livro: LivroModel): Observable<LivroModel> {
-    return this.http.post<LivroModel>(`https://loclhost:8080//autor/${idAutor}/livro`);
-    
+  public createLivro(idAutor: any, livro: LivroModel): Observable<LivroModel> {
+    return this.http.post<LivroModel>(`https://localhost:8080//autor/${idAutor}/livro`, livro);
+
   }
 }

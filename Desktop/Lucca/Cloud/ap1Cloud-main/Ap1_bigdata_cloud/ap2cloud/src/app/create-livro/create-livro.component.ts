@@ -14,7 +14,7 @@ export class CreateLivroComponent {
 
   livro = new FormControl('', [Validators.required]);
   @Output() newLivroEvent = new EventEmitter();
-  @Input() idMarca:any = '';
+  @Input() idAutor:any = '';
 
   constructor(private livroService: LivroService, private snackBar: MatSnackBar) {
 
@@ -26,13 +26,11 @@ export class CreateLivroComponent {
     }
 
     let livro: LivroModel = {
-      nomeLivro: this.livro.value as string,
-      categoria: this.livro.value as string,
-      descricao: this.livro.value as string,
-      preco: this.livro.value as string,
+      titulo: this.livro.value as string,
+      ano: this.livro.value as string
     };
 
-    this.livroService.createLivro(this.idMarca, livro).subscribe(response => {
+    this.livroService.createLivro(this.idAutor, livro).subscribe(response => {
       this.snackBar.open("Livro criado com sucesso", "Ok");
       this.newLivroEvent.emit();
     });

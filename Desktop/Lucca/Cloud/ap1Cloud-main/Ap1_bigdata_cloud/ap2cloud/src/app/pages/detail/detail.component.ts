@@ -30,22 +30,22 @@ export class DetailComponent implements OnInit {
       console.log(response);
     });
 
-    this.carregaProduto();
+    this.carregaLivro();
   }
 
-  private carregaProduto() {
+  private carregaLivro() {
     let idAutor = this.route.snapshot.params["idAutor"];
     this.livroService.getLivro(idAutor).subscribe(response => {
       this.livro = response;
     });
   }
 
-  public mostrarCriarProduto() {
+  public mostrarCriarLivro() {
     this.showCriarLivro = true;
   }
 
-  public atualizarProduto() {
-    this.carregaProduto();
+  public atualizarLivro() {
+    this.carregaLivro();
   }
 
 }

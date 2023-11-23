@@ -1,13 +1,18 @@
 {
-    "angular-schematics.schematicsDefaultOptions": {
-        "angular-*": {
-            "externalTemplate": true
-        },
-        "angular-component": {
-            "skipChangeDetectionOnPush": true
-        },
-        "angular-page": {
-            "skipChangeDetectionOnPush": true
-        }
-    }
+  "angular-schematics.schematicsDefaultOptions": {
+      "angular-*": {
+          "externalTemplate": true
+      },
+      "angular-component": {
+          "skipChangeDetectionOnPush": true
+      },
+      "angular-page": {
+          "skipChangeDetectionOnPush": true
+      }
+  },
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.shellArgs.windows": [
+      "/k",
+      "C:\\Program Files\\nodejs\\nodevars.bat"
+  ]
 }

@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "ng serve",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8080",
+        "webRoot": "${workspaceFolder}/ap2cloud",  // Ajuste para o seu subdiretório
+        "sourceMapPathOverrides": {
+          "webpack:/*": "${webRoot}/*"
+        },
+        "sourceMaps": true,
+        "runtimeArgs": [
+          "--preserve-symlinks"
+        ]
+      }
+    ]
+  }
+  
